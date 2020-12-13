@@ -1,7 +1,9 @@
  * {
   box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+  }
 /* brand color palette */
 :root {
   --primary: rgb(119, 161, 102);
@@ -20,11 +22,6 @@ body {
   line-height: 1.5;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
 h6 {
   margin: 0;
 }
@@ -58,11 +55,12 @@ nav {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border-radius: 15px;
+  border-radius: 30px;
 }
 
 nav a {
   text-decoration: none;
+  text-align: center;
   padding: 5px 10px;
   color: var(--secondary);
   border-radius: 15px;
@@ -73,11 +71,12 @@ nav a {
   background-position: bottom;
   transition: all 0.25s ease-in;
   font-size: 1.4rem;
+  justify-content: space-around;
 }
 
 nav a:hover {
   background-size: 100% 100%;
-  color: var(--primary);
+  color: var(--tertiary);
 }
 
 nav a:last-child {
@@ -100,8 +99,8 @@ main {
   padding: 2% 6%;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
-  text-align: right;
+  align-items: center;
+  text-align: center;
 }
 
 .hero-banner div {
@@ -320,5 +319,8 @@ main {
   }
   .contact-address{
       text-align:center;
+  }
+  .contact address a:hover{
+      display: none
   }
 }
